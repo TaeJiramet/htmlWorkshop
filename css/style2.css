@@ -1,0 +1,76 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+
+    background-image: url("");
+
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+
+    background-color: rgb(75, 255, 156);
+}
+
+.header {
+    background-color: white;
+    display: flex;
+    /* เรียงแนวนอน */
+    align-items: center;
+    /* จัดให้อยู่กึ่งกลางแนวตั้ง */
+    gap: 15px;
+    /* ระยะห่างรูปกับข้อความ */
+    padding: 20px;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 20px auto 30px;
+    padding: 20px;
+    background-color: rgb(95, 176, 252);
+}
+
+.card {
+    background-color: rgb(255, 255, 255);
+    margin-bottom: 25px;
+    padding: 25px;
+    border-radius: 10px;
+
+}
+
+.logo img {
+  transition: 0.4 ease;
+  width: 40px;
+  height: auto;
+  margin: 15px 0;
+  border-radius: 20px;
+  vertical-align: middle;
+}
+
+.logo img:hover {
+  transform: scale(1.05);
+}
+
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+th, td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: left;
+}
+
+footer {
+    text-align: center;
+    margin-top: 50px;
+    background-color: black;
+    color: white;
+    padding: 10px;
+}
