@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body {
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif
+    line-height: 1.6;
+
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+
+    background-color: rgb(50, 255, 142);
+}
+
+        .header {
+            background-color: rgb(69, 154, 0);
+            box-shadow: 5px 5px 15px rgb(94, 240, 250);
+            padding: 2px;
+            color: white;
+            font-size: 40px;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: fixed;
+            height: 150px;
+            top: 0;
+            left: 0%;
+            width: 100%;
+            
+        }
+        .container {
+    max-width: 1100px;
+    margin: 20px auto 30px;
+    padding: 20px;
+
+}
+
+.card {
+    background-color: rgb(255, 255, 255);
+    margin-bottom: 25px;
+    padding: 25px;
+    border-radius: 10px;
+    margin-top: 180px;
+    
+
+}
+
+.card2 {
+    background-color: rgb(255, 255, 255);
+    margin-bottom: 25px;
+    padding: 25px;
+    border-radius: 10px;
+
+}
+
+.card3 {
+    background-color: rgb(255, 255, 255);
+    margin-bottom: 25px;
+    padding: 25px;
+    border-radius: 10px;
+
+}
+.card4 {
+    background-color: rgb(255, 61, 61);
+    margin-bottom: 5px;
+    box-shadow: 0 4px 15px rgb(78, 44, 0);
+    padding: 5px;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 40px;
+
+}
+
+.card-module {
+    background-color: rgb(247, 107, 7);
+    margin-bottom: 25px;
+    padding: 10px;
+    border-radius: 10px;
+
+}
+
+.btn-text-link {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  margin-top: 10px;
+}
+
+.btn-text-link li {
+  margin: 15px 0;
+  transition: transform 0.3s ease;
+}
+
+.btn-text-link li:hover {
+  transform: translateY(-10px);
+}
+
+.btn-text-link a {
+  /* background-color: rgb(183, 11, 11); */
+  background:rgb(216, 219, 254);
+  padding: 13px 20px;
+  border-radius: 5%;
+
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.5 rem;
+}
+
+.btn-text-link a:hover {
+  background: rgb(216, 252, 86);
+}
+
+ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+}
+li {
+  margin: 0 10px;
+}
+.position {
+  display: flex;
+  bottom: 2px dashed rgb(163, 163, 163);
+  margin: 20px 0;
+  align-items: center;
+
+}
+.position.left {justify-content: flex-start;}
+
+.image{
+    border-radius: 80%;
+}
+
+footer {
+    text-align: center;
+    margin-top: 50px;
+    background-color: black;
+    color: white;
+    padding: 10px;
+}
+
+    </style>
+</head>
+
+<body>
+
+    <div class="header">
+        <p>📋รายงานผลเกรด</p>
+    </div>
+<div class="container">
+    <div class="card">
+        <ul class="btn-text-link" >
+            <li><a href="#card1" style="color: rgb(0, 0, 0);">ข้อมูลนักศึกษา</a></li>
+            <li><a href="#card2" style="color: rgb(0, 0, 0);">ผลการเรียน</a></li>
+            <li><a href="#card3" style="color: rgb(0, 0, 0);">ติดต่อ</a></li>
+        </ul>
+    </div>
+
+    <div class="card2" id="card1">
+        <div class="card-module">
+            <p>Mr.Jiramet Wongkanha</p>
+            <hr>
+            <p>รหัสนักศึกษา:674259004</p>
+            <p>ชื่อ-นามสกุล: นายจิรเมธ วงษ์กัณหา</p>
+            <p>หมู่เรียน: 67/50</p>
+            <p>อาจารย์ที่ปรึกษา: ผู้ช่วยศาสตราจารย์ ดร. อุษณีย์ ภักดีตระกูลวงศ์</p>
+            <p>GitHub: <a href="https://github.com/TaeJiramet">https://github.com/TaeJiramet</a></p>
+        </div>
+        <div class="position left">
+            <img class="image" src="data:image/jpg;base64,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" alt="student">
+        </div>
+    </div>
+    <div class="card3">
+        <div class="containner"></div>
+        <p>ปี 1 เทอม 1: <p style="color: brown;">3.91</p></p>
+        <p>ปี 1 เทอม 2: <p style="color: brown;">3.64</p></p>
+        <p>ปี 2 เทอม 1: <p style="color: brown;">3.40</p></p>
+    </div>
+
+    <div class="card4">
+        <p>เกรดเฉลี่ยสะสม: 3.66</p>
+    </div>
+    </div>
+            <footer>
+                <p>&copy; 2026 Webmaster by Jiramet Wongkanha. ID674259004</p>
+                <p>🏠 Nakhon Pathom Rajabhat University</p>
+            </footer>
+</body>
+</html>
+
+
+
+

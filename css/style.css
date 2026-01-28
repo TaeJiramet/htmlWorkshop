@@ -144,7 +144,7 @@ code {
 }
 
 .btn-text-link a:hover {
-  background: linear-gradient(135deg, rgb(253, 1, 1), rgb(152, 13, 13) (0, 255, 21));
+  background: (135deg, rgb(253, 1, 1), rgb(152, 13, 13) (0, 255, 21));
 }
 
 /* Group 2 Styles */
