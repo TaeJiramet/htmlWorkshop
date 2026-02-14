@@ -565,3 +565,56 @@ background: linear-gradient(45deg, #5a67d8, #6b46c1);
 transform: translateY(-2px);
 box-shadow: 0 8px 20px rgba(102, 126, 234, 0.35);
 }
+
+/*================================ receive-news-title ==========================*/
+
+.receive-news-title {
+font-size: 1.2rem;
+font-weight: 600;
+color: #333;
+text-align: center; ;
+}
+
+.card-color {
+background: linear-gradient(135deg, #16a085, #2ecc71);;
+}
+
+.color-layer.form-button {
+background: linear-gradient(135deg, #4facfe, #00f2fe);;
+}
+
+.card-color1 {
+background: linear-gradient(135deg, #e933da, #4a89e1);;
+}
+
+.color-layer1.form-button {
+background: linear-gradient(135deg, #d28212, #ecb53f);;
+}
+
+.facebook-box {
+    background-color: rgb(244, 244, 244);
+    text-align: center;
+    padding: 30px 20px;
+    border-radius: 5px;
+    margin-bottom: 30px;
+}
+
+.sponser-box {
+    background-color: rgb(215, 215, 215);
+    border-radius: 5px;
+    margin-bottom: 30px;
+    height: 300px;
+
+    display: flex;
+    align-items: center;      /* กลางแนวตั้ง */
+    justify-content: center;  /* กลางแนวนอน */
+}
+
+/*========================  Footer ============================== */
+footer {
+            text-align:center;
+            margin-top: 50px;
+            background-color: black;
+            color: white;
+            padding: 30px;
+}
