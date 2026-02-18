@@ -15,8 +15,8 @@ body {
 }
 
 .wrapper {
-    width: 1000px;
-    max-width: 100%;
+    width: 1100px;
+    max-width: 90%;
     margin: 0 auto;
 
 }
@@ -609,6 +609,90 @@ background: linear-gradient(135deg, #d28212, #ecb53f);;
     align-items: center;      /* กลางแนวตั้ง */
     justify-content: center;  /* กลางแนวนอน */
 }
+ 
+
+/*========================  gold price ============================== */
+
+:root{
+    --line: #f7990c;
+    --bg01: rgb(243, 207, 130);
+    --bg02: rgb(137, 226, 137);
+    --bg03:rgb(252, 245, 154);
+    --up: green;
+    --down: red;
+}
+.wrap-table{
+    border:1px solid var(--line);
+    border-radius: 5px;
+    overflow: hidden;
+}
+.price-table{
+    width: 100%;
+    color: #000000;
+    background-color: var(--bg03);
+
+
+    border-collapse: collapse;
+}
+
+.price-table th,
+.price-table td{
+    border: 1px solid var(--line);
+    padding: 10px 4px;
+}
+
+.price-table thead th {
+        background-color: var(--bg01);
+}
+
+.month{
+    background-color: var(--bg01);
+}
+
+.num{
+    text-align: right;
+}
+
+.delta {
+    text-align: center;
+}
+
+.delta.up{
+    color: var(--up);
+}
+.delta.down{
+    color: var(--down);
+}
+
+.price-table tr.total th,
+.price-table tr.total td {
+    background-color: var(--bg02);
+    font-weight: 600;
+}
+
+.icon{
+    display: inline-block;
+    width: 0px;
+    height: 0px;
+    border-left:6px solid transparent ;
+    border-right:6px solid transparent ;
+}
+
+.icon.up {
+    border-bottom: 10px solid var(--up);
+
+    margin-right: 5px;
+}
+.icon.down {
+    border-top: 10px solid var(--down);
+
+    margin-right: 5px;
+}
+
+
+
+
+
 
 /*========================  Footer ============================== */
 footer {
@@ -617,4 +701,109 @@ footer {
             background-color: black;
             color: white;
             padding: 30px;
+}
+
+
+/*========================  responsive ============================== */
+ 
+
+
+@media (max-width: 922px) {
+    .site-header {
+        background-color: #dacc08;
+    }
+}
+
+@media (max-width: 768px) {
+    .site-header {
+        background-color: #17b908;
+    }
+    .hero-grid,
+    .content-layout,
+    .form-row{
+        grid-template-columns: 1fr;
+    }
+    .form-checkbox-group{
+        flex-direction: column;
+        gap: 10px;
+    }
+    .nav-menu{
+        flex-direction: column;
+        padding-top: 10px;
+    }
+    .nav-menu li a {
+        border-top: 1px solid rgb(255, 255, 255,0.2);
+    }
+}
+
+/* ซ่อน hamburger บนขอใหญ่*/
+#burger-menu{
+    display: none;
+}
+
+@media (max-width: 576px) {
+    .site-header {
+        background-color: #e40de4;
+    }
+
+    /* กำหนดขนาด/พื้นที่ของปุ่ม*/
+    #burger-menu{
+        display: block;
+        height: 25px;
+        width: 30px;
+        position: relative;
+        z-index: 1000;
+        cursor: pointer;
+    }
+    /*            วาดเส้น 3 ขีด ด้วยspan + pseudo element            */
+    #burger-menu span,
+    #burger-menu span::before,
+    #burger-menu span::after{
+        background-color: white;
+        height: 3px;
+        width: 100%;
+        position: absolute;
+        display: block;
+        transition: all 0.3s ease;
+        content:"";
+    }
+
+    /* จัดตำแหน่ง 3 เส้น บน กลาง ล่าง*/
+    #burger-menu span{ top: 11px;}
+    #burger-menu span::before{ top: -8px;}
+    #burger-menu span::after{top: 8px;}
+
+
+    /* Animation เมื่อกด */
+
+    /* ทำให้เส้น “กลาง” หายไป (โปร่งใส) */
+    #burger-menu.close span {
+        background: transparent;
+    }
+
+    /* เส้นบน rotate(45deg) หมุนเฉียงไปทางขวา */
+    /* top: 0; ทำให้ทั้งสองเส้น “มาซ้อนกันตรงกลาง” ก่อนหมุน */
+    #burger-menu.close span:before {
+        transform: rotate(45deg);
+        top: 0;
+    }
+
+    /* เส้นล่าง rotate(-45deg) หมุนเฉียงไปทางซ้าย */
+    #burger-menu.close span:after {
+        transform: rotate(-45deg);
+        top: 0;
+    }
+
+ /*  ซ่อนเมนู */
+    #menu {
+        display: none;
+        flex-direction: column;
+        background: #1e8bc3;
+    }
+
+ /* เปิดเมนูเมื่อ active แสดงเมนูขึ้นมา*/
+
+    #menu.overlay{
+        display: flex;
+    }
 }
